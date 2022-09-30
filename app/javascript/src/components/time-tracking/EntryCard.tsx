@@ -1,22 +1,22 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import React from "react";
 
-import { minutesToHHMM } from "helpers/hhmm-parser";
+import { Badge } from "StyledComponents";
 
-import { Badge } from "../../styledComponents";
+import { minutesToHHMM } from "helpers/hhmm-parser";
 
 const deleteIcon = require("../../../../assets/images/delete.svg");
 const editIcon = require("../../../../assets/images/edit.svg");
 
 interface props {
-  id: number;
-  client: string;
-  project: string;
-  note: string;
-  duration: number;
-  handleDeleteEntry: (id: number) => void;
-  setEditEntryId: React.Dispatch<React.SetStateAction<number>>;
-  bill_status: string;
+	id: number;
+	client: string;
+	project: string;
+	note: string;
+	duration: number;
+	handleDeleteEntry: (id: number) => void;
+	setEditEntryId: React.Dispatch<React.SetStateAction<number>>;
+	bill_status: string;
 }
 
 const EntryCard: React.FC<props> = ({
